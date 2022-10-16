@@ -1,0 +1,35 @@
+[
+  {
+    "firstName": "Barbara",
+    "lastName": "Wilson",
+    "streetAddress": "123 Main Street",
+    "city": "Cardston",
+    "zipCode": "T0K 0K0",
+    "phoneNumber": "403-555-8547",
+    "country": "Canada",
+    "email": "barb@wilson.con",
+    "birthday": "09/13/1971"
+  },
+  {
+    "firstName": "Mariah",
+    "lastName": "Liel",
+    "streetAddress": "242 2nd Ave",
+    "city": "Sacramento",
+    "zipCode": "95621",
+    "phoneNumber": "916-555-9965",
+    "country": "United States",
+    "email": "mariah@liel.com",
+    "birthday": "08/21/1990"
+  },
+  {
+    "firstName": "Amanda",
+    "lastName": "Wilson",
+    "streetAddress": "685 Apple Blvd",
+    "city": "Antelope",
+    "zipCode": "95748",
+    "phoneNumber": "916-555-8563",
+    "country": "United States",
+    "email": "amanda@wilson.com",
+    "birthday": "11/27/1991"
+  }
+]
