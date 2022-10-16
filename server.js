@@ -5,12 +5,21 @@ const mongodb = require("./db/connect");
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-})
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  })
+  .use("/", require("./routes"));
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-})
+mongodb.initDb((err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port);
+    console.log(`Connected to DB & listening on port ${port}`);
+  }
+});
 
 // Continue watching the solution video from 13 minutes
