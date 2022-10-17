@@ -1,0 +1,94 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My Address Book API",
+    "description": "An address for all my contacts",
+    "version": "1.0.0"
+  },
+  "host": "",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/contacts/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastname": {
+                  "example": "any"
+                },
+                "streetAddress": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "zipCode": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
