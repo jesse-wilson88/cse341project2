@@ -1,0 +1,24 @@
+// Using localhost
+### Getting all of the contacts
+GET http://localhost:3000/contacts
+
+### Get one contact by ID
+GET http://localhost:3000/contacts/634c3b91ec2716f690e4340b
+
+### Create a new contact to address book
+POST http://localhost:3000/contacts
+Content-Type: : application/json
+
+{
+  "firstName": "Dominic",
+  "lastname": "Caravaggio",
+  "streetAddress": "922 Main SW",
+  "city": "Cardston",
+  "state": "Alberta",
+  "zipCode": "T0K 0K0",
+  "country": "Canada"
+}
+
+
+
+// Using Render
