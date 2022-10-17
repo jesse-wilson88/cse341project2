@@ -20,5 +20,23 @@ Content-Type: : application/json
 }
 
 
-
 // Using Render
+### Getting all of the contacts
+GET https://jessewilson341-a2.onrender.com/contacts
+
+### Get one contact by ID
+GET https://jessewilson341-a2.onrender.com/contacts/634c3b91ec2716f690e4340b
+
+### Create a new contact to address book
+POST https://jessewilson341-a2.onrender.com/contacts
+Content-Type: : application/json
+
+{
+  "firstName": "Dominic",
+  "lastname": "Caravaggio",
+  "streetAddress": "922 Main SW",
+  "city": "Cardston",
+  "state": "Alberta",
+  "zipCode": "T0K 0K0",
+  "country": "Canada"
+}

@@ -26,7 +26,34 @@ const getSingle = async (req, res) => {
   });
 };
 
+const createContact = async (req, res) => {
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastname,
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body.zipCode,
+    country: req.body.country,
+  };
+  const response = await mongodb
+    .getDb()
+    .db("address_book")
+    .collection("address_book")
+    .insertOne(contact);
+  if (response.acknowledged) {
+    res.status(201).json(response);
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while creating the contact."
+      );
+  }
+};
+
 module.exports = {
   getAll,
   getSingle,
+  createContact,
 };
