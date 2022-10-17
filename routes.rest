@@ -7,7 +7,7 @@ GET http://localhost:3000/contacts/634c3b91ec2716f690e4340b
 
 ### Create a new contact to address book
 POST http://localhost:3000/contacts
-Content-Type: : application/json
+Content-Type: application/json
 
 {
   "firstName": "Dominic",
@@ -21,15 +21,15 @@ Content-Type: : application/json
 
 
 // Using Render
-### Getting all of the contacts
+### Getting all of the contacts from Render
 GET https://jessewilson341-a2.onrender.com/contacts
 
-### Get one contact by ID
+### Get one contact by ID from Render
 GET https://jessewilson341-a2.onrender.com/contacts/634c3b91ec2716f690e4340b
 
-### Create a new contact to address book
+### Create a new contact to address book from Render
 POST https://jessewilson341-a2.onrender.com/contacts
-Content-Type: : application/json
+Content-Type: application/json
 
 {
   "firstName": "Dominic",
