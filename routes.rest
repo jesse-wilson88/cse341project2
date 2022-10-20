@@ -1,11 +1,11 @@
-// Using localhost
-### Getting all of the contacts
+// USING LOCALHOST
+### Display all contacts
 GET http://localhost:3000/contacts
 
-### Get one contact by ID
+### Find a contact by ID
 GET http://localhost:3000/contacts/634c3b91ec2716f690e4340b
 
-### Create a new contact to address book
+### Add new contact to address book
 POST http://localhost:3000/contacts
 Content-Type: application/json
 
@@ -19,15 +19,31 @@ Content-Type: application/json
   "country": "Canada"
 }
 
+### Update an existing contact in address book
+PUT http://localhost:3000/contacts/6350c6e5100b909afa5a5bf2
+Content-Type: application/json
 
-// Using Render
-### Getting all of the contacts from Render
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "streetAddress": "123 His Street",
+  "city": "Cardston",
+  "state": "Alberta",
+  "zipCode": "T0K 0K0",
+  "country": "Canada"
+}
+
+### Delete an existing contact
+DELETE http://localhost:3000/contact/6350c6e5100b909afa5a5bf2
+
+// USING RENDER
+### Display all contacts from Render
 GET https://jessewilson341-a2.onrender.com/contacts
 
-### Get one contact by ID from Render
+### Find a contact by ID from Render
 GET https://jessewilson341-a2.onrender.com/contacts/634c3b91ec2716f690e4340b
 
-### Create a new contact to address book from Render
+### Add new contact to address book from Render
 POST https://jessewilson341-a2.onrender.com/contacts
 Content-Type: application/json
 
@@ -40,3 +56,20 @@ Content-Type: application/json
   "zipCode": "T0K 0K0",
   "country": "Canada"
 }
+
+### Update an existing contact in address book from Render
+PUT https://jessewilson341-a2.onrender.com/contacts/634c3b91ec2716f690e4340b
+Content-Type: application/json
+
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "streetAddress": "123 His Street",
+  "city": "Cardston",
+  "state": "Alberta",
+  "zipCode": "T0K 0K0",
+  "country": "Canada"
+}
+
+### Delete an existing contact from Render
+DELETE https://jessewilson341-a1.onrender.com/contacts/634c3b91ec2716f690e4340b

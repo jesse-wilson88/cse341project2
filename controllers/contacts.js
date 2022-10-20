@@ -1,3 +1,5 @@
+const { response } = require("express");
+const { mongo } = require("mongoose");
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
@@ -52,8 +54,55 @@ const createContact = async (req, res) => {
   }
 };
 
+const updateContact = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body.zipCode,
+    country: req.body.country,
+  };
+  const response = await mongodb
+    .getDb()
+    .db("address_book")
+    .collection("address_book")
+    .replaceOne({ _id: userId }, contact);
+  if (response.acknowledged) {
+    res.status(204).json(response);
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while updating the contact."
+      );
+  }
+};
+
+const deleteContact = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+    .getDb()
+    .db("address_book")
+    .collection("address_book")
+    .remove({ _id: userId }, true);
+  if (response.acknowledged) {
+    res.status(200).json(response);
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while deleting the contact."
+      );
+  }
+};
+
 module.exports = {
   getAll,
   getSingle,
   createContact,
+  updateContact,
+  deleteContact,
 };
