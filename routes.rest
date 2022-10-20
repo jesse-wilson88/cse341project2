@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ### Delete an existing contact
-DELETE http://localhost:3000/contact/6350c6e5100b909afa5a5bf2
+DELETE http://localhost:3000/contacts/6350d84ce35208eaa16dd647
 
 // USING RENDER
 ### Display all contacts from Render
