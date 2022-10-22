@@ -11,7 +11,7 @@ Content-Type: application/json
 
 {
   "firstName": "Dominic",
-  "lastname": "Caravaggio",
+  "lastName": "Caravaggio",
   "streetAddress": "922 Main SW",
   "city": "Cardston",
   "state": "Alberta",
@@ -49,7 +49,7 @@ Content-Type: application/json
 
 {
   "firstName": "Dominic",
-  "lastname": "Caravaggio",
+  "lastName": "Caravaggio",
   "streetAddress": "922 Main SW",
   "city": "Cardston",
   "state": "Alberta",
