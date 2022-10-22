@@ -31,7 +31,7 @@ const getSingle = async (req, res) => {
 const createContact = async (req, res) => {
   const contact = {
     firstName: req.body.firstName,
-    lastName: req.body.lastname,
+    lastName: req.body.lastName,
     streetAddress: req.body.streetAddress,
     city: req.body.city,
     state: req.body.state,
