@@ -1,5 +1,3 @@
-const { response } = require("express");
-const { mongo } = require("mongoose");
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
