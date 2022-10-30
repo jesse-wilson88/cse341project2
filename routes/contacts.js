@@ -3,6 +3,9 @@ const router = express.Router();
 
 const contactsController = require("../controllers/contacts");
 const validation = require("../middleware/validate");
+const loadUser = require("../middleware/loadUser");
+
+router.use([loadUser]);
 
 router.get("/", contactsController.getAll);
 

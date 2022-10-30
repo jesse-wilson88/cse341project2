@@ -6,7 +6,7 @@ const doc = {
     description: "An address for all my contacts",
   },
   host: "",
-  schemes: ["https", "http"],
+  schemes: ["http", "https"],
 };
 
 const outputFile = "swagger-output.json";
