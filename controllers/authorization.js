@@ -16,7 +16,7 @@ const AuthorizationController = {
     // );
   },
   callback: async (req, res) => {
-    // res.json(req.query.code);
+    // res.json(req.query.code); // Returns the code without the lines of code below
     const response = await fetch(`${appConfig.authorizationHost}/oauth/token`, {
       method: "POST",
       headers: {
