@@ -2,6 +2,12 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    res.send("Not authorization");
+    return;
+  }
+  console.log(req.user);
   const result = await mongodb
     .getDb()
     .db("address_book")
@@ -14,6 +20,11 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    res.send("Not authorization");
+    return;
+  }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -27,6 +38,11 @@ const getSingle = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    res.send("Not authorization");
+    return;
+  }
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -53,6 +69,11 @@ const createContact = async (req, res) => {
 };
 
 const updateContact = async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    res.send("Not authorization");
+    return;
+  }
   const userId = new ObjectId(req.params.id);
   const contact = {
     firstName: req.body.firstName,
@@ -80,6 +101,11 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    res.send("Not authorization");
+    return;
+  }
   const userId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()

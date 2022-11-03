@@ -12,7 +12,7 @@ const AuthorizationController = {
 
     res.redirect(authorizationUrl);
     // res.redirect(
-    //   "https://dev-3y7ljkeqs73u3lsn.us.auth0.com/authorize?response_type=code&client_id=UFB7NTyEMySxua6w8MNpdRHLrSxf9kvY&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&state=1234&scope=openid%20profile%20email"
+    //   "https://dev-3y7ljkeqs73u3lsn.us.auth0.com/authorize?response_type=code&client_id=UFB7NTyEMySxua6w8MNpdRHLrSxf9kvY&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&state=1234&scope=openid%20profile%20email"
     // );
   },
   callback: async (req, res) => {

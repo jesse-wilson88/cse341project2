@@ -1,12 +1,12 @@
 // USING LOCALHOST
 ### Display all contacts
-GET http://localhost:3000/contacts
+GET http://localhost:8080/contacts
 
 ### Find a contact by ID
-GET http://localhost:3000/contacts/634c3b91ec2716f690e4340b
+GET http://localhost:8080/contacts/634c3b91ec2716f690e4340b
 
 ### Add new contact to address book
-POST http://localhost:3000/contacts
+POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ### Update an existing contact in address book
-PUT http://localhost:3000/contacts/635148478e2f681ce5159b4c
+PUT http://localhost:8080/contacts/635148478e2f681ce5159b4c
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ### Delete an existing contact
-DELETE http://localhost:3000/contacts/635148478e2f681ce5159b4c
+DELETE http://localhost:8080/contacts/635148478e2f681ce5159b4c
 
 // USING RENDER
 ### Display all contacts from Render
