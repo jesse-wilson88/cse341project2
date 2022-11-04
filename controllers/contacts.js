@@ -2,6 +2,7 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
+  console.log(`User is ${req.user}`);
   if (!req.user) {
     res.status(401);
     res.send("Not authorization");
