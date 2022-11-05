@@ -1,4 +1,5 @@
 const swaggerAutogen = require("swagger-autogen")();
+const appConfig = require("./config/app");
 
 const doc = {
   info: {
@@ -7,6 +8,20 @@ const doc = {
   },
   host: "",
   schemes: ["http", "https"],
+  securityDefinitions: {
+    Authorization: {
+      type: "apikey",
+      name: "Authorization",
+      in: "header",
+      description: "Authorization token (Bearer)",
+      example: "Bearer <your token>",
+    },
+  },
+  security: [
+    {
+      Authorization: [],
+    },
+  ],
 };
 
 const outputFile = "swagger-output.json";
