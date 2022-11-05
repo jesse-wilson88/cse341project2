@@ -13,7 +13,7 @@
   ],
   "securityDefinitions": {
     "Authorization": {
-      "type": "apikey",
+      "type": "apiKey",
       "name": "Authorization",
       "in": "header",
       "description": "Authorization token (Bearer)",

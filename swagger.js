@@ -1,5 +1,5 @@
 const swaggerAutogen = require("swagger-autogen")();
-const appConfig = require("./config/app");
+// const appConfig = require("./config/app");
 
 const doc = {
   info: {
@@ -10,7 +10,7 @@ const doc = {
   schemes: ["http", "https"],
   securityDefinitions: {
     Authorization: {
-      type: "apikey",
+      type: "apiKey",
       name: "Authorization",
       in: "header",
       description: "Authorization token (Bearer)",
