@@ -454,5 +454,10 @@
         }
       }
     }
-  }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
 }
