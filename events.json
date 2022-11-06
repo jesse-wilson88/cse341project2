@@ -1,6 +1,14 @@
 [
   {
     "eventName": "Dad's Birthday",
-    "eventDate": "15/05/1940"
+    "eventDate": "05/16/1940"
+  },
+  {
+    "eventName": "Mom's Birthday",
+    "eventDate": "05/15/1940"
+  },
+  {
+    "eventName": "Barbara's Birthday",
+    "eventDate": "09/13/1971"
   }
 ]
