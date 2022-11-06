@@ -3,7 +3,7 @@ const validator = require("../helpers/validate");
 const saveEvent = (req, res, next) => {
   const validateRule = {
     eventName: "required|string",
-    eventDate: "required|string",
+    eventDate: "required|date",
   };
   validator(req.body, validateRule, {}, (err, status) => {
     if (!status) {
