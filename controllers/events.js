@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
   // console.log(req.user);
   const result = await mongodb
     .getDb()
-    .db("events")
+    .db()
     .collection("events")
     .find();
   result.toArray().then((lists) => {
@@ -29,7 +29,7 @@ const getSingle = async (req, res) => {
   const eventId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db("events")
+    .db()
     .collection("events")
     .find({ _id: eventId });
   result.toArray().then((lists) => {
@@ -50,7 +50,7 @@ const createEvent = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db("events")
+    .db()
     .collection("events")
     .insertOne(contact);
   if (response.acknowledged) {
@@ -77,7 +77,7 @@ const updateEvent = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db("events")
+    .db()
     .collection("events")
     .replaceOne({ _id: eventId }, contact);
   if (response.acknowledged) {
@@ -100,7 +100,7 @@ const deleteEvent = async (req, res) => {
   const eventId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
-    .db("events")
+    .db()
     .collection("events")
     .deleteOne({ _id: eventId }, true);
   if (response.acknowledged) {
